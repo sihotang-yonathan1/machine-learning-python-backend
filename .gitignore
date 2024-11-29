@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# model, uncomment if you want to include the model at git 
+# (i think it's rather bad to include something like 300 MB in git) 
+*.keras
+*.h5
