@@ -7,7 +7,15 @@ Sebelum menjalankan aplikasi, pastikan seluruh dependency sudah terinstall. Anda
 ```
 pip install -r requirements.txt
 ```
+
+Setelah itu, download model melalui google drive. Anda dapat menggunakan script yang sudah dibuat pada folder script:
+```
+python scripts/model_download.py
+```
+
 Untuk menjalankan aplikasi ini, silakan ketikkan ini di terminal anda:
 ```
 fastapi dev main.py
 ```
+
+Secara default, aplikasi akan berjalan di `localhost:8000`
