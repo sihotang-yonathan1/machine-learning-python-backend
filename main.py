@@ -9,6 +9,10 @@ from utils.image_handling import load_image_from_bytes
 from config.configuration import app, BASE_PATH
 from config.model import model
 
+from scripts.model_download import check_model
+
+# Cara barbar
+import subprocess
 
 @app.post(f'{BASE_PATH}/image')
 async def post_image(image: Annotated[UploadFile, File()]):
@@ -38,4 +42,8 @@ async def post_image(image: Annotated[UploadFile, File()]):
 
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=400)
+
+if __name__ == '__main__':
+    check_model()
+    subprocess.run(['fastapi', 'run', 'main.py'])
 
