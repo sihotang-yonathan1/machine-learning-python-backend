@@ -43,7 +43,7 @@ async def post_image(image: Annotated[UploadFile, File()]):
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=400)
 
-if __name__ == '__main__':
-    check_model()
-    subprocess.run(['fastapi', 'run', 'main.py'])
+# if __name__ == '__main__':
+#     check_model()
+#     subprocess.run(['fastapi', 'run', 'main.py'])
 
