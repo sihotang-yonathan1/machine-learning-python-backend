@@ -30,7 +30,7 @@ async def post_image(image: Annotated[UploadFile, File()]):
             'data': {
                 'result': predicted_label,
                 '_prediction_value': {
-                    CLASSES[counter]: value
+                    CLASSES[counter].lower(): value
                     for counter, value in enumerate(_result.tolist())
                 }
             }
